@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import { UserContext, UserStorage } from "../../UserContext";
+import Logo from "../../Assets/logo.png";
 
 export default function Header() {
   // const { data } = React.useContext(UserStorage);
@@ -10,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <Link className={styles.logo} to="/" aria-label="Medtest - Home">
-          {/* imagem da logo */}
+          <img src={Logo} alt="" />
         </Link>
         <Link className={styles.login} to="/login">
           Login / Cadastrar
