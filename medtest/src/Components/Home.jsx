@@ -11,10 +11,10 @@ export default function Home() {
         Site desenvolvido como parte do processo seletivo da MedCloud
       </p>
       <div className={styles.home}>
-        <Link className={styles.btn} to="/login">
+        <Link className="btn" to="/login">
           Login
         </Link>
-        <Link className={styles.btn} to="/cadastro">
+        <Link className="btn" to="/cadastro">
           Cadastre-se
         </Link>
       </div>

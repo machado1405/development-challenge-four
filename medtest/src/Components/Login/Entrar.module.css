@@ -1,0 +1,32 @@
+.section {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnCentralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perdeu {
+  display: inline-block;
+  color: #002639;
+  padding: 1rem 0;
+  line-height: 1;
+  font-size: 1.275rem;
+}
+
+.perdeu:hover {
+  color: #009adf;
+}
+
+.perdeu::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  display: block;
+}

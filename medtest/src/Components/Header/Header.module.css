@@ -33,3 +33,25 @@
   background: #002639;
   transition: .3s;
 }
+
+.conta {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #002639;
+}
+
+.conta:hover {
+  color: #009adf;
+}
+
+.conta a{
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #002639;
+}
+
+.conta a:hover {
+  color: #009adf;
+}

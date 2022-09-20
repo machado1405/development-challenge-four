@@ -97,3 +97,16 @@ form {
     margin-top: 2rem;
   }
 }
+
+.btn {
+  color: #fff;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  background: #009adf;
+}
+
+.btn:hover {
+  background: #002639;
+  transition: .3s;
+  transform: scale(1.2);
+}

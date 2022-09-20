@@ -15,6 +15,10 @@ const types = {
     regex: /^\d+$/,
     message: "Utilize apenas números",
   },
+  cep: {
+    regex: /^[0-9]{5}-[0-9]{3}$/,
+    message: "Formato inválido",
+  },
 };
 
 function useForm(type) {

@@ -1,28 +1,21 @@
 import React from "react";
 import styles from "./Input.module.css";
+import TextField from "@mui/material/TextField";
 
-export default function Input({
-  label,
-  type,
-  name,
-  value,
-  onChange,
-  error,
-  onBlur,
-}) {
+export default function Input({ label, type, name, onChange, error, onBlur }) {
   return (
     <div className={styles.wrapper}>
-      <label htmlFor={name} className={styles.label}>
-        {label}
-      </label>
-      <input
-        id={name}
+      <TextField
+        margin="normal"
+        required
+        fullWidth
         name={name}
-        className={styles.input}
+        label={label}
         type={type}
-        value={value}
+        id={name}
         onChange={onChange}
         onBlur={onBlur}
+        autoComplete="current-password"
       />
       {error && <p className={styles.error}>{error}</p>}
     </div>
