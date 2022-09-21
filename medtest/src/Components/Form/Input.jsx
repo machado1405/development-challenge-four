@@ -15,7 +15,7 @@ export default function Input({ label, type, name, onChange, error, onBlur }) {
         id={name}
         onChange={onChange}
         onBlur={onBlur}
-        autoComplete="current-password"
+        variant="outlined"
       />
       {error && <p className={styles.error}>{error}</p>}
     </div>

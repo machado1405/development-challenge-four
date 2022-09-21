@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Footer.module.css";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 
@@ -12,7 +11,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/">
         Medtest
       </Link>
       {" Desenvolvido por Matheus Machado "}

@@ -10,6 +10,7 @@ import Entrar from "./Components/Login/Entrar";
 import Cadastro from "./Components/Login/Cadastro";
 import User from "./Components/User/User";
 import PerdeuSenha from "./Components/Password/PerdeuSenha";
+import AlterarSenha from "./Components/Password/AlterarSenha";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                 }
               />
               <Route path="/perdeu" element={<PerdeuSenha />} />
+              <Route path="/resetar" element={<AlterarSenha />} />
             </Routes>
           </main>
           <Footer />

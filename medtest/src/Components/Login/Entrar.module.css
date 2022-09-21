@@ -1,16 +1,3 @@
-.section {
-  display:flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.btnCentralizar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .perdeu {
   display: inline-block;
   color: #002639;

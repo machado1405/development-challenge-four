@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Error from "../Helpers/Error";
 import useForm from "../../Hooks/useForm";
 import { UserContext } from "../../UserContext";
+import Head from "../Helpers/Head";
 
 export default function Entrar() {
   const username = useForm();
@@ -22,12 +23,14 @@ export default function Entrar() {
   }
 
   return (
-    <section className={`${styles.section} animeLeft container mainContainer`}>
+    <section className="animeLeft container mainContainer section">
+      <Head title="Login" />
       <Titulo texto="Login" />
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
-        <div className={styles.btnCentralizar}>
+        <Error error={error && "Dados incorretos."} />
+        <div className="btnCentralizar">
           {loading ? (
             <Button disabled>Entrando...</Button>
           ) : (
@@ -38,7 +41,7 @@ export default function Entrar() {
       <Link className={styles.perdeu} to="/perdeu">
         Perdeu a senha?
       </Link>
-      <div className={styles.section}>
+      <div className="section">
         <Titulo texto="Não possui cadastro?" />
         <Link className={styles.perdeu} to="/cadastro">
           Cadastre-se

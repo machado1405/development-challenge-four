@@ -2,33 +2,31 @@ import React from "react";
 import Titulo from "../Titulo/Titulo";
 import Input from "../Form/Input";
 import useForm from "../../Hooks/useForm";
-import styles from "./User.module.css";
 import Button from "../Form/Button";
+import Head from "../Helpers/Head";
 
 export default function User() {
-  const cep = useForm();
+  const nascimento = useForm("nascimento");
+  const cep = useForm("cep");
   const bairro = useForm();
-  const complemento = useForm("email");
+  const complemento = useForm();
   const cidade = useForm();
   const endereco = useForm();
   const pais = useForm();
-  const nascimento = useForm();
-  const numero = useForm();
-  const [ativo, setAtivo] = React.useState(false);
+  const numero = useForm("number");
 
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-    setAtivo(!ativo);
-    const response = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
-    const json = await response.json();
+    console.log(nascimento);
   }
 
   return (
-    <section className={`${styles.section} container mainContainer animeLeft`}>
+    <section className="container mainContainer animeLeft section">
+      <Head title="Conta" />
       <Titulo texto="Finalize seu cadastro" />
       <form onSubmit={handleSubmit}>
         <Input
-          label="Data de nascimento"
+          label="Data de nascimento __/__/____"
           type="text"
           name="nascimento"
           {...nascimento}
@@ -45,11 +43,9 @@ export default function User() {
         />
         <Input label="Cidade" type="text" name="cidade" {...cidade} />
         <Input label="País" type="text" name="pais" {...pais} />
-        {ativo ? (
-          <Button disabled>Enviando...</Button>
-        ) : (
+        <div className="btnCentralizar">
           <Button>Enviar</Button>
-        )}
+        </div>
       </form>
     </section>
   );
